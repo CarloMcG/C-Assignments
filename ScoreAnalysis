@@ -1,0 +1,134 @@
+// Find the hgihest, lowst and average scores from an array of Score objects, and also calculate the number of student that pass and fail
+#include "stdafx.h"
+#include "stdio.h"
+
+int lowest(int nums[], int len);
+int highest(int nums[], int len);
+double average(int nums[], int len);
+int numPassed(int nums[], int len);
+int numFailed(int nums[], int len);
+
+int main()
+{
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int i = 0;
+    int low, high;
+    double avg;
+    int numPasses, numFails;
+
+    printf("Scores: \n");
+    while (i < 10)
+    {
+        printf("%d \t", arr[i]);
+        i++;
+    }
+
+    low = lowest(arr, 10);
+    printf("\n Lowest = %d \n", low);
+
+    high = highest(arr, 10);
+    printf("Highest = %d \n", high);
+
+    avg = average(arr, 10);
+    printf("Average = %.2f \n", avg);
+
+    numPasses = numPassed(arr, 10);
+    printf("Number of passes = %d \n", numPasses);
+
+    numFails = numFailed(arr, 10);
+    printf("Number of fails = %d \n", numFails);
+}
+
+int lowest(int nums[], int len)
+{
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int i = 0;
+    int j = 0;
+
+    while (i < 10)
+    {
+        if (i == 0)
+        {
+            j = arr[i];
+        }
+        if (arr[i] < j)
+        {
+            j = arr[i];
+        }
+        i++;
+    }
+    return j;
+}
+
+int highest(int nums[], int len)
+{
+
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int i = 0;
+    int j = 0;
+
+    while (i < 10)
+    {
+        if (i == 0)
+        {
+
+            j = arr[i];
+        }
+        if (arr[i] > j)
+        {
+            j = arr[i];
+        }
+        i++;
+    }
+    return j;
+}
+
+double average(int nums[], int len)
+{
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int avg;
+    int i = 0;
+    int j = 0;
+
+    while (i < 10)
+    {
+        j = j + arr[i];
+        i++;
+    }
+    avg = j / 10;
+    return avg;
+}
+
+int numPassed(int nums[], int len)
+{
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int i = 0;
+    int j = 0;
+
+    while (i < 10)
+    {
+        if (arr[i] >= 40)
+        {
+            j++;
+        }
+        i++;
+    }
+    return j;
+}
+
+int numFailed(int nums[], int len)
+{
+    int arr[10] = {5, 25, 45, 66, 77, 34, 90, 22, 68, 84};
+    int i = 0;
+    int j = 0;
+
+    while (i < 10)
+    {
+        if (arr[i] < 40)
+        {
+            j++;
+        }
+        i++;
+    }
+    return j;
+}
