@@ -1,6 +1,6 @@
 // Find the hgihest, lowst and average scores from an array of Score objects, and also calculate the number of student that pass and fail
-#include "stdafx.h"
-#include "stdio.h"
+#include <stdafx.h>
+#include <stdio.h>
 
 int lowest(int nums[], int len);
 int highest(int nums[], int len);
