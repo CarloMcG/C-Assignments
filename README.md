@@ -1,7 +1,5 @@
 # C-labs
 This Repo contains 4 programs written in C which were developed as assignment solutions for a Programming module at NUI Galway
-
-**Note** *This Repo has been forked from an older GitHub account that was created as part of a university module*
 ## Area Calculator
 Calculates the area of a given shape selected by the user by carrying out mathematical operations on the dimensions tehy provide.
 This area calculator supports the following shapes:
